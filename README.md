@@ -1,4 +1,4 @@
-# BF in C (442g bytes)
+# BF in C (434 bytes)
 
 Minimal BF interpreter, written in C
 
