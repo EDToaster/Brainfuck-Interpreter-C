@@ -1,6 +1,6 @@
 #include<stdio.h>
 int m[999999],s[999999],c,i,*r=m,*p=s;
-int main(int n,char **v){
+main(int n,char **v){
   FILE *f=fopen(v[1],"r");
   for(;(c=fgetc(f))!=EOF;i++)s[i]=c;
   for(;*p;p++){
