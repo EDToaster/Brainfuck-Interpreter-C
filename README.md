@@ -1,5 +1,5 @@
 # BF in C
-![](https://img.badgesize.io/:EDToaster:Brainfuck-Interpreter-C:master:main.c)
+![](https://img.badgesize.io/:EDToaster/:Brainfuck-Interpreter-C/:master/:main.c)
 
 Minimal BF interpreter, written in C
 
