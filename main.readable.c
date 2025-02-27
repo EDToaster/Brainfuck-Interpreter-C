@@ -1,16 +1,18 @@
-#include<stdio.h>
-int m[999999],s[999999],*r=m,*p=s;
-main(c,v)char **v;{
-  FILE *f=fopen(v[1],"r");
-  while(~(*p++=fgetc(f)));
-  for(p=s;c=*p;p++){
-    int d=92-c,o=d;
-    c==60||c==62?r+=c-61:c==43||c==45?*r+=44-c:c==44?*r=getchar():c==46?putchar(*r):0;
-    if(!(c-91&&c-93||(d>=0)-!*r)){
-      do{
-        p+=d;
-        if(*p==91||*p==93)o+=92-*p;
-      }while(o);
-    }
+// Combined tape and program array
+// size = 2_097_152
+char m[1<<21], 
+// program counter
+*p = m, 
+// memory cell
+*r=m+99999;
+d, o;
+
+main(c, v) char **v;
+{
+  read(open(v[1],0),p,-1);
+  for(;c=*p;p++){
+    o = d = 92 - c,
+    c-60?c-62?c-43?c-45?c-44?c-46?:putchar(*r):read(0,r,1):--*r:++*r:++r:--r;
+    if(!(c^91|*r)+!(c^93|!*r)) while (p+=d,o+=(*p==91)-(*p==93));
   }
 }
