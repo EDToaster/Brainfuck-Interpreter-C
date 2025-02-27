@@ -8,4 +8,4 @@ Why not
 
 ## Usage
 
-Compile and run `./bf <filename>`
+Compile and run `gcc main.c && ./a.out mandelbrot.bf`
