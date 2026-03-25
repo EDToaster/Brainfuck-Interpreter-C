@@ -1,3 +1,3 @@
 ## Usage
 
-Compile and run `gcc main.c && ./a.out "$(cat mandelbrot.bf)"`
+Compile and run `make && ./bf "$(cat mandelbrot.bf)"`
